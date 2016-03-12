@@ -13,8 +13,8 @@ class WP_Glide {
 	 * The constructor.
 	 */
 	public function __construct() {
-		$this->base_url     = apply_filters( 'glide/base_url', '/img/' );
-		$this->base_url     = sprintf( '/%s/', ltrim( rtrim( $this->base_url, '/' ), '/' ) );
+		$this->base_url = apply_filters( 'glide/base_url', '/img/' );
+		$this->base_url = sprintf( '/%s/', ltrim( rtrim( $this->base_url, '/' ), '/' ) );
 
 		add_action( 'init', [$this, 'add_endpoint'] );
 		add_action( 'parse_query', [$this, 'handle_endpoint'] );
