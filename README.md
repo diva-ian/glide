@@ -31,7 +31,7 @@ For more options see [Glide setup](http://glide.thephpleague.com/1.0/config/setu
 
 ## Coding style
 
-You can check if your contribution passes the styleguide by installing [PHP CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer) and running the following in your Papi directory:
+You can check if your contribution passes the styleguide by installing [PHP CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer) and running the following in your WP Glide directory:
 
 ```
 $ vendor/bin/phpcs -s --extensions=php --standard=phpcs.xml src/
