@@ -19,6 +19,14 @@ Before: http://local.wordpress.dev/wp-content/uploads/2015/11/stf01381_1600x800.
 After:  http://local.wordpress.dev/img/2015/11/stf01381_1600x800.jpg
 ```
 
+You can change the upload url path with `pre_option_upload_url_path` filter.
+
+```php
+add_filter( 'pre_option_upload_url_path', function () {
+  return site_url( '/img' );
+} );
+```
+
 The base path can be changed with `glide/base_url` filter. To change any options for Glide you can do it with `glide/options` filter. The default options in WP Glide is:
 
 ```php
