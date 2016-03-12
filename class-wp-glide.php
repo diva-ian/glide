@@ -73,7 +73,7 @@ class WP_Glide {
 
 		if ( file_exists( rtrim( $options['source'], '/' ) . '/' . $path ) ) {
 			status_header( 200 );
-			$server = League\Glide\ServerFactory::create( $options );
+			$server = \League\Glide\ServerFactory::create( $options );
 			$server->outputImage( $path, $_GET );
 			die;
 		}
@@ -83,10 +83,3 @@ class WP_Glide {
 		die;
 	}
 }
-
-/**
- * Load Glide plugin.
- */
-add_action( 'plugins_loaded', function () {
-	new WP_Glide;
-} );

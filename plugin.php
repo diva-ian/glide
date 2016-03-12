@@ -15,3 +15,10 @@ if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
 
 // Load WP Glide.
 require_once __DIR__ . '/src/class-wp-glide.php';
+
+/**
+ * Bootstrap WP Glide.
+ */
+add_action( 'plugins_loaded', function () {
+	new WP_Glide;
+} );
