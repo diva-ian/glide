@@ -21,7 +21,7 @@ After:  http://local.wordpress.dev/img/2015/11/stf01381_1600x800.jpg
 
 The base path can be changed with `glide/base_url` filter. To change any options for Glide you can do it with `glide/options` filter. The default options in WP Glide is:
 
-```
+```php
 'source'   => WP_CONTENT_DIR . '/uploads',
 'cache'    => WP_CONTENT_DIR . '/cache/glide',
 'base_url' => '/img/'
