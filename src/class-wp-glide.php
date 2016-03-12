@@ -1,18 +1,5 @@
 <?php
 
-/**
- * Plugin Name: Glide
- * Description: Simple integration of Glide with WordPress
- * Author: Fredrik Forsmo
- * Author URI: https://frozzare.com
- * Version: 1.0.0
- * Plugin URI: https://github.com/frozzare/wp-glide
- */
-
-if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
-	require_once __DIR__ . '/vendor/autoload.php';
-}
-
 class WP_Glide {
 
 	/**
@@ -26,8 +13,8 @@ class WP_Glide {
 	 * The constructor.
 	 */
 	public function __construct() {
-		$this->base_url     = apply_filters( 'glide/base_url', '/img/' );
-		$this->base_url     = sprintf( '/%s/', ltrim( rtrim( $this->base_url, '/' ), '/' ) );
+		$this->base_url = apply_filters( 'glide/base_url', '/img/' );
+		$this->base_url = sprintf( '/%s/', ltrim( rtrim( $this->base_url, '/' ), '/' ) );
 
 		add_action( 'init', [$this, 'add_endpoint'] );
 		add_action( 'parse_query', [$this, 'handle_endpoint'] );
@@ -86,7 +73,7 @@ class WP_Glide {
 
 		if ( file_exists( rtrim( $options['source'], '/' ) . '/' . $path ) ) {
 			status_header( 200 );
-			$server = League\Glide\ServerFactory::create( $options );
+			$server = \League\Glide\ServerFactory::create( $options );
 			$server->outputImage( $path, $_GET );
 			die;
 		}
@@ -96,10 +83,3 @@ class WP_Glide {
 		die;
 	}
 }
-
-/**
- * Load Glide plugin.
- */
-add_action( 'plugins_loaded', function () {
-	new WP_Glide;
-} );
