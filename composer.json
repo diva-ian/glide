@@ -1,0 +1,27 @@
+{
+  "name": "frozzare/wp-glide",
+  "type": "wordpress-plugin",
+  "license": "MIT",
+  "description": "Simple integration of Glide with WordPress",
+  "homepage": "https://github.com/frozzare/wp-glide",
+  "authors": [{
+    "name": "Fredrik Forsmo",
+    "email": "fredrik.forsmo@gmail.com",
+    "homepage": "https://github.com/frozzare"
+  }],
+  "keywords": [
+    "wordpress",
+    "glide",
+    "images"
+  ],
+  "require": {
+    "php": "^5.5.9 || ^7.0",
+    "league/glide": "^1.0"
+  },
+  "scripts": {
+    "post-install-cmd": "if [ -f vendor/bin/phpcs ]; then \"vendor/bin/phpcs\" --config-set installed_paths vendor/wp-coding-standards/wpcs; fi",
+    "post-update-cmd": "if [ -f vendor/bin/phpcs ]; then \"vendor/bin/phpcs\" --config-set installed_paths vendor/wp-coding-standards/wpcs; fi"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
