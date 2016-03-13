@@ -52,7 +52,7 @@ class WP_Glide {
 	/**
 	 * Serve images.
 	 */
-	public function serve() {
+	private function serve() {
 		$base = $this->base_url;
 		$url  = $_SERVER['REQUEST_URI'];
 		$url  = parse_url( $url );
