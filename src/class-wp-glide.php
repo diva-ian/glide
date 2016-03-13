@@ -18,7 +18,6 @@ class WP_Glide {
 
 		add_action( 'init', [$this, 'add_endpoint'] );
 		add_action( 'parse_query', [$this, 'handle_endpoint'] );
-		add_action( 'glide/serve', [$this, 'serve'] );
 	}
 
 	/**
@@ -47,11 +46,7 @@ class WP_Glide {
 			return;
 		}
 
-		if ( has_action( 'glide/serve' ) !== false ) {
-			status_header( 200 );
-			do_action( 'glide/serve' );
-			wp_die();
-		}
+		$this->serve();
 	}
 
 	/**
