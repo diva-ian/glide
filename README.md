@@ -1,5 +1,7 @@
 # WP Glide
 
+[![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
+
 Simple integration of [Glide](http://glide.thephpleague.com/) with WordPress.
 
 ## Installation
