@@ -16,7 +16,7 @@
   ],
   "require": {
     "php": "^5.5.9 || ^7.1",
-    "league/glide": "^1.7"
+    "league/glide": "^1.6"
   },
   "scripts": {
     "post-install-cmd": "if [ -f vendor/bin/phpcs ]; then \"vendor/bin/phpcs\" --config-set installed_paths vendor/wp-coding-standards/wpcs; fi",
