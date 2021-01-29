@@ -1,13 +1,13 @@
 {
-  "name": "frozzare/wp-glide",
+  "name": "diva-dev/glide",
   "type": "wordpress-plugin",
   "license": "MIT",
   "description": "Simple integration of Glide with WordPress",
-  "homepage": "https://github.com/frozzare/wp-glide",
+  "homepage": "https://github.com/diva-dev/glide",
   "authors": [{
     "name": "Fredrik Forsmo",
     "email": "fredrik.forsmo@gmail.com",
-    "homepage": "https://github.com/frozzare"
+    "homepage": "https://github.com/diva-dev"
   }],
   "keywords": [
     "wordpress",
@@ -15,8 +15,8 @@
     "images"
   ],
   "require": {
-    "php": "^5.5.9 || ^7.1",
-    "league/glide": "^1.6"
+    "php": "^5.5.9 || ^7.2",
+    "league/glide": "^1.7"
   },
   "scripts": {
     "post-install-cmd": "if [ -f vendor/bin/phpcs ]; then \"vendor/bin/phpcs\" --config-set installed_paths vendor/wp-coding-standards/wpcs; fi",
